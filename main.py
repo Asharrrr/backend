@@ -21,7 +21,6 @@ model = OpenAIChatCompletionsModel(
 )
 
 main_agent = Agent(
-    name="Python Assistant",
         name="Physical AI Book Assistant",
         instructions="You are An Book Assistant and always respond about this book which url is https://hackathon-course-book.vercel.app/ ",
     model=model
@@ -57,4 +56,5 @@ async def chat(req: ChatMessage):
     except Exception as e:
         print("ERROR:", e)
         return {"response": f"Backend error: {str(e)}"}
+
 
